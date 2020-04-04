@@ -8,7 +8,7 @@ Repositório com o conteúdo das aulas.
 
 - [x] Módulo 0 - Introdução
 - [x] [Módulo 1 - Sincronia de funções Javascript](./modulo-1-sincronia-de-funcoes-javascript)
-- [ ] Módulo 2 - Manipulação de listas
+- [ ] [Módulo 2 - Manipulação de listas](./modulo-2-manipulacao-de-listas)
 - [ ] Módulo 3 - Introdução a desenvolvimento de testes automatizados
 - [ ] Módulo 4 - Node.js além da Web - Criando ferramentas de linha de comando
 - [ ] Módulo 5 - Bancos de Dados - Nosso projeto Multi-banco de dados
