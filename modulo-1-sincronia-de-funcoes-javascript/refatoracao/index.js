@@ -5,7 +5,7 @@
 */
 // importamos um módulo interno do node.js
 const util = require('util')
-const obterEnderecoAsync = util.promisefy(obterTelefone)
+const obterEnderecoAsync = util.promisify(obterEndereco)
 
 function obterUsuario() {
     // quando der algum problema --> reject(ERRO)
@@ -62,10 +62,20 @@ usuarioPromise
     })
     .then(function (resultado) {
         const endereco = obterEnderecoAsync(resultado.usuario.id)
-        return endereco;
+        return endereco.then(function resolverEndereco(result) {
+            return {
+                usuario: resultado.usuario,
+                telefone: resultado.telefone,
+                endereco: result
+            }
+        })
     })
     .then(function (resultado) {
-        console.log('resultado', resultado)
+        console.log(`
+            Nome: ${resultado.usuario.nome}
+            Endereco: ${resultado.endereco.rua}, ${resultado.endereco.numero}
+            Telefone: (${resultado.telefone.ddd}) ${resultado.telefone.telefone}
+        `)
     })
     .catch(function (error) {
         console.error('DEU RUIM', error)
