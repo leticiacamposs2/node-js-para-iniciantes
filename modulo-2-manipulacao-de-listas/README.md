@@ -19,8 +19,8 @@ reduce([🍔, 🍟, 🍗, 🍿], eat)
 
 - [x] Introdução ao Capítulo
 - [x] [Manipulando listas com For/ForIn/ForOf](./for-forin-forof)
-- [ ] [Criando nosso próprio Array.Map](./array-map)
-- [ ] Criando nosso próprio Array.Filter
+- [x] [Criando nosso próprio Array.Map](./array-map)
+- [ ] [Criando nosso próprio Array.Filter](./array-filter)
 - [ ] Criando nosso próprio Array.Reduce
 
 ---

@@ -1,4 +1,4 @@
-const service = require('./service')
+const service = require('../service')
 
 Array.prototype.meuMap = function(callback) {
     const novoArrayMapeado = []
