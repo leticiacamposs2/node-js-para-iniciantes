@@ -7,7 +7,7 @@ Repositório com o conteúdo das aulas.
 ## 🤯 Aulas
 
 - [x] Módulo 0 - Introdução
-- [ ] [Módulo 1 - Sincronia de funções Javascript](./modulo-1-sincronia-de-funcoes-javascript)
+- [x] [Módulo 1 - Sincronia de funções Javascript](./modulo-1-sincronia-de-funcoes-javascript)
 - [ ] Módulo 2 - Manipulação de listas
 - [ ] Módulo 3 - Introdução a desenvolvimento de testes automatizados
 - [ ] Módulo 4 - Node.js além da Web - Criando ferramentas de linha de comando

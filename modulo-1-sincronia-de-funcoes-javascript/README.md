@@ -14,7 +14,7 @@ Neste módulo é feito o entendimento de como funciona as coisas por debaixo dos
 - [x] Introdução a resolução de Promises com async/await
 - [x] [Resolução de promises com sync/await](./async-await)
 - [x] Introdução à manipulação de eventos com EventEmitter
-- [ ] [Trabalhando com eventos com a classe EventEmitter](./event-emitter)
+- [x] [Trabalhando com eventos com a classe EventEmitter](./event-emitter)
 
 
 ---
