@@ -47,6 +47,8 @@ function obterEndereco(idUsuario, callback) {
 main()
 async function main() {
     try {
+        console.time('medida-promise')
+
         const usuario = await obterUsuario()
         const telefone = await obterTelefone(usuario.id)
         const endereco = await obterEnderecoAsync(usuario.id)
@@ -56,6 +58,9 @@ async function main() {
             Telefone: (${telefone.ddd}) ${telefone.telefone},
             Endereco: ${endereco.rua}, ${endereco.numero}
         `)
+
+        console.timeEnd('medida-promise')
+
     } catch(error) {
         console.log('DEU RUIM', error)
     }
