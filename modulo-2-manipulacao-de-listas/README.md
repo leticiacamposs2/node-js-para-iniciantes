@@ -18,8 +18,8 @@ reduce([🍔, 🍟, 🍗, 🍿], eat)
 ## 🤯 Aulas:
 
 - [x] Introdução ao Capítulo
-- [ ] Manipulando listas com For/ForIn/ForOf
-- [ ] Criando nosso próprio Array.Map
+- [x] [Manipulando listas com For/ForIn/ForOf](./for-forin-forof)
+- [ ] [Criando nosso próprio Array.Map](./array-map)
 - [ ] Criando nosso próprio Array.Filter
 - [ ] Criando nosso próprio Array.Reduce
 
