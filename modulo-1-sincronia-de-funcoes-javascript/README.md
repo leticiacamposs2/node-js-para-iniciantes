@@ -10,8 +10,8 @@ Neste módulo é feito o entendimento de como funciona as coisas por debaixo dos
 - [x] [Entendendo o ciclo de vida de aplicações Javascript](#ciclo-de-vida-js)
 - [x] [Trabalhando com Callbacks](./callbacks)
 - [x] [Introdução a Promises](./promises)
-- [ ] [Refatorando Callbacks para Promises](./refatoracao)
-- [ ] Introdução a resolução de Promises com async/await
+- [x] [Refatorando Callbacks para Promises](./refatoracao)
+- [ ] [Introdução a resolução de Promises com async/await](./async-await)
 - [ ] Resolução de promises com sync/await
 - [ ] Introdução à manipulação de eventos com EventEmitter
 - [ ] Trabalhando com eventos com a classe EventEmitter
