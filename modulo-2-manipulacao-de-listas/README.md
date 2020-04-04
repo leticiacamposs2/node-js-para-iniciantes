@@ -11,7 +11,7 @@ filter([🍔, 🍟, 🍗, 🍿], isVegetarian)
 => [🍟, 🍿]
 
 reduce([🍔, 🍟, 🍗, 🍿], eat)
-=> ❌
+=> 💩
 
 ---
 
@@ -22,3 +22,10 @@ reduce([🍔, 🍟, 🍗, 🍿], eat)
 - [ ] Criando nosso próprio Array.Map
 - [ ] Criando nosso próprio Array.Filter
 - [ ] Criando nosso próprio Array.Reduce
+
+---
+
+## 🚀 Instalação
+
+- `npm init -y` => Inicia o projeto com Node.js
+- `npm install axios` => Instala a biblioteca Axios
