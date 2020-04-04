@@ -14,12 +14,11 @@ const stdin = process.openStdin()
 function main() {
     return new Promise(function (resolve, reject) {
         stdin.addListener('data', function (value) {
-            // console.log(`Você digitou: ${value.toString().trim()}`)
             return resolve(value)
         })
     })
 }
 
 main().then(function (resultado) {
-    console.log('resultao', resultado.toString())
+    console.log('resultado', resultado.toString())
 })
