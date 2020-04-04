@@ -4,22 +4,22 @@
     2 Obter o endereço pelo Id
 */
 
-function obterUsuario() {
-    setTimeout(function() {
-        return {
+function obterUsuario(callback) {
+    setTimeout(function () {
+        return callback(null, {
             id: 1,
             nome: 'Aladin',
             dataNascimento: new Date()
-        }
+        })
     }, 1000)
 }
 
-function obterTelefone(idUsuario) {
+function obterTelefone(idUsuario, callback) {
     setTimeout(() => {
-        return {
+        return callback(null, {
             telefone: '11349494',
             ddd: 11
-        }
+        })
     }, 2000);
 }
 
@@ -27,8 +27,19 @@ function obterEndereco(idUsuario) {
 
 }
 
-const usuario = obterUsuario()
-// const telefone = obterTelefone(usuario.id)
+function resolverUsuario(erro, usuario) {
+    console.log('usuario', usuario)
+}
 
-console.log('usuario', usuario);
-// console.log('telefone', telefone);
+obterUsuario(function resolverUsuario(error, usuario) {
+    if(error) {
+        console.error('DEU RUIM EM USUÁRIO', error)
+        return;
+    }
+    obterTelefone(usuario.id, function resolverTelefone(error1, telefone) {
+        if (error1) {
+            console.error('DEU RUIM EM USUÁRIO', error1)
+            return;
+        }
+    })
+})
