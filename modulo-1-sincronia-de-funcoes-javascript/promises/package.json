@@ -1,0 +1,11 @@
+{
+  "name": "promises",
+  "version": "1.0.0",
+  "description": "1. <b>Pending:</b> Estado inicial, ainda não terminou ou ainda não foi rejeitado.\r 2. <b>Fulfilled:</b> Quando executou todas as operações com sucesso.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
