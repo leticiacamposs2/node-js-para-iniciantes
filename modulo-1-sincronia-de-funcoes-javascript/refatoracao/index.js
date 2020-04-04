@@ -61,6 +61,10 @@ usuarioPromise
             })
     })
     .then(function (resultado) {
+        const endereco = obterEnderecoAsync(resultado.usuario.id)
+        return endereco;
+    })
+    .then(function (resultado) {
         console.log('resultado', resultado)
     })
     .catch(function (error) {
