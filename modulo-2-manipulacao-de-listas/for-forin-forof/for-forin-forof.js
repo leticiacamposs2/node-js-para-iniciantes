@@ -16,7 +16,8 @@ async function main() {
             console.timeEnd('for')
         */
 
-
+        
+        /**        
             console.time('forin')
 
             for(let i in result.results) {
@@ -25,7 +26,16 @@ async function main() {
             }
 
             console.timeEnd('forin')
+        */
 
+
+        console.time('forof')
+
+        for(pessoa of result.results) {
+            names.push(pessoa.name)
+        }
+
+        console.timeEnd('forof')
 
         console.log('names', names)
     } catch(error) {
