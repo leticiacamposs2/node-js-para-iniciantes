@@ -9,9 +9,12 @@ async function main() {
         //     names.push(item.name);
         // })
 
-        const names = results.results.map(function (pessoa) {
-            return pessoa.name
-        })
+        // const names = results.results.map(function (pessoa) {
+        //     return pessoa.name
+        // })
+
+
+        const names = results.results.map((pessoa) => pessoa.names)
 
         console.log('names', names)
     } catch (error) {
