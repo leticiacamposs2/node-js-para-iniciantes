@@ -1,4 +1,4 @@
-# Módulo 02 - Manipulação de listas 🚀
+# Módulo 02 - Manipulação de listas 📜
 
 Neste módulo é feito o entendimento de manipulação de listas.
 
