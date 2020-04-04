@@ -28,6 +28,6 @@ Repositório com o conteúdo das aulas.
 - Instale Node.js em seu computador https://nodejs.org/pt-br/.
 - Execute o comando `node --version`, para verificar a versão do Node instalada em sua máquina.
 
-#### Iniciando um projeto
+#### 🎬 Iniciando um projeto
 
 - Para iniciar um projeto Node.js, execute o comando `npm init` (ou `npm init -y` para executar com as configurações padrão).
