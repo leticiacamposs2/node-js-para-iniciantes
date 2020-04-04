@@ -8,4 +8,4 @@
 - Facilita a visualização do fluxo de funções.
 - Não altera a performance de sua aplicação (caso seja usado de forma correta).
 - Já existente no C# foi desenvolvido no JavaScript.
-- Usar apenas quando necessitar tratar a resposta da chamada (Await).
+- Usar apenas quando necessitar tratar a resposta da chamada (Await).  

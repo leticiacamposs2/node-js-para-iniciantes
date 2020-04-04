@@ -11,8 +11,8 @@ Neste módulo é feito o entendimento de como funciona as coisas por debaixo dos
 - [x] [Trabalhando com Callbacks](./callbacks)
 - [x] [Introdução a Promises](./promises)
 - [x] [Refatorando Callbacks para Promises](./refatoracao)
-- [ ] [Introdução a resolução de Promises com async/await](./async-await)
-- [ ] Resolução de promises com sync/await
+- [x] Introdução a resolução de Promises com async/await
+- [ ] [Resolução de promises com sync/await](./async-await)
 - [ ] Introdução à manipulação de eventos com EventEmitter
 - [ ] Trabalhando com eventos com a classe EventEmitter
 
