@@ -29,3 +29,19 @@ reduce([🍔, 🍟, 🍗, 🍿], eat)
 
 - `npm init -y` => Inicia o projeto com Node.js
 - `npm install axios` => Instala a biblioteca Axios
+
+---
+
+## 🤯 Desestruturação de objetos
+
+- Para pegar somente alguns atributos do item:
+
+```
+const item = {
+	nome: 'Leticia',
+	idade: 25,
+}
+
+const {nome} = item;
+const {nome, idade} = item;
+```
