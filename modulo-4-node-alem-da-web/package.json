@@ -1,0 +1,14 @@
+{
+  "name": "modulo-4-node-alem-da-web",
+  "version": "1.0.0",
+  "description": "Criando uma aplicação usando javascript, promises, testes, async/await com ferramentas de linha de comando fazendo um CRUD baseado em arquivos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}
