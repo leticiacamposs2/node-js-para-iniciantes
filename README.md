@@ -9,8 +9,8 @@ Repositório com o conteúdo das aulas.
 - [x] Módulo 0 - Introdução
 - [x] [Módulo 1 - Sincronia de funções Javascript](./modulo-1-sincronia-de-funcoes-javascript)
 - [x] [Módulo 2 - Manipulação de listas](./modulo-2-manipulacao-de-listas)
-- [ ] [Módulo 3 - Introdução a desenvolvimento de testes automatizados](./modulo-3-testes-automatizados)
-- [ ] Módulo 4 - Node.js além da Web - Criando ferramentas de linha de comando
+- [x] [Módulo 3 - Introdução a desenvolvimento de testes automatizados](./modulo-3-testes-automatizados)
+- [ ] [Módulo 4 - Node.js além da Web - Criando ferramentas de linha de comando](./modulo-4-node-alem-da-web)
 - [ ] Módulo 5 - Bancos de Dados - Nosso projeto Multi-banco de dados
 - [ ] Módulo 6 - Introdução ao Postgres e Bancos Relacionais
 - [ ] Módulo 7 - Introdução ao MongoDB e Bancos Não-Relacionais (NoSQL)

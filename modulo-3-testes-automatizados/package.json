@@ -1,5 +1,5 @@
 {
-  "name": "ambiente-testes",
+  "name": "testes-automatizados",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-    "mock": "^0.1.1"
+    "nock": "^12.0.3"
   },
   "devDependencies": {
     "mocha": "^7.1.1"

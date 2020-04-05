@@ -4,7 +4,7 @@ const {
 } = require('./service')
 
 // instalamos o pacote nock, para simular requisicoes
-const mock = require('mock')
+const nock = require('nock')
 
 
 describe('Star Wars tests', () => {
@@ -31,7 +31,7 @@ describe('Star Wars tests', () => {
             }]
         }
 
-        mock('https://swapi.co/api/people')
+        nock('https://swapi.co/api/people')
             .get('/?search=r2-d2&format=json')
             .reply(200, response)
     })
