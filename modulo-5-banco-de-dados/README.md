@@ -1,4 +1,7 @@
-# Módulo 05 - Banco de Dados - Nosso projeto Multi-banco de dados 🚀
+# Módulo 05 - Banco de Dados
+Nosso projeto Multi-banco de dados 🚀
+
+****
 
 ## 🤯 Aulas
 
@@ -120,5 +123,7 @@ docker exec -it mongodb \
 - Para Remover uma imagem da máquina:
 
 `docker rm id_ou_nome_da_imagem`
+
+****
 
 <b>Note:</b> [outros comandos mais utilizados no docker](https://woliveiras.com.br/posts/comandos-mais-utilizados-no-docker/#Comoeuseiquaisasimagensdisponveisnomeurepositriolocal)
