@@ -55,3 +55,5 @@ async function main() {
         console.error('DEU RUIM', error)
     }
 }
+
+main()
