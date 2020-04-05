@@ -45,3 +45,8 @@ const item = {
 const {nome} = item;
 const {nome, idade} = item;
 ```
+
+## Utilizado neste módulo
+
+- [Api Star Wars](https://swapi.co/)
+- Biblioteca axios: `npm install axios`
