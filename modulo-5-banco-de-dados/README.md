@@ -6,22 +6,11 @@ Nosso projeto Multi-banco de dados 🚀
 ## 🤯 Aulas
 
 - [x] Criando projetos multi-bancos de dados
-- [ ] Trabalhando com o padrão Strategy para multi datasources
-- [ ] [Design Patterns - Strategy](#padrao-strategies)
-- [ ] Demonstração multi datasources com strategy design pattern
+- [x] Trabalhando com o padrão Strategy para multi datasources
+- [x] Design Patterns - Strategy
+- [ ] [Demonstração multi datasources com strategy design pattern](./design-patterns)
 
 ****
-<div id="padrao-strategies">
-
-## Padrão Strategies(GOF)- é um padrão comportamental.
-
-- Trabalhando com multi-databases.
-- Trabalha fortemente com a orientação à objetos.
-
-![exemplo-tv-globinho](./imgs/exemplo-tv-globinho.png)
-![exemplo-banco-de-dados](./imgs/exemplo-banco-de-dados.png)
-
-**** 
 
 ## Inicialização e Configuração do Docker
 

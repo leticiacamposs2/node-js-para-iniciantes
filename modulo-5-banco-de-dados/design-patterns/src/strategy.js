@@ -23,7 +23,23 @@ class ICrud {
 }
 
 class MongoDB extends ICrud {
+    constructor() {
+        super()
+    }
 
+    create(item) {
+        console.log('O item foi salvo em MongoDB')
+    }
+}
+
+class Postgres extends ICrud {
+    constructor() {
+        super()
+    }
+
+    create(item) {
+        console.log('O item foi salvo em Postgres')
+    }
 }
 
 class ContextStrategy {
@@ -47,3 +63,6 @@ class ContextStrategy {
         this._database.delete(id)
     }
 }
+
+const contextMongo = new ContextStrategy(new MongoDB())
+contextMongo.create()
