@@ -4,10 +4,15 @@ Criando uma aplicação usando javascript, promises, testes, async/await com fer
 
 ****
 
-## Aulas
+## 🤯 Aulas
 
-1. Introdução ao Capítulo
-2. Manipulando arquivos - READ
+[x] Introdução ao Capítulo
+[x] Manipulando arquivos - READ
+[ ] Manipulando arquivos - CREATE
+[ ] Manipulando arquivos - DELETE
+[ ] Manipulando arquivos - UPDATE
+[ ] Criando ferramentas de linha de comando
+
 
 ****
 
