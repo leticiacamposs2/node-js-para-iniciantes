@@ -6,7 +6,7 @@ Repositório com o conteúdo das aulas.
 
 ## 🤯 Aulas
 
-- [x] Módulo 0 - Introdução
+- [x] [Módulo 0 - Introdução](./modulo-0-introducao)
 - [x] [Módulo 1 - Sincronia de funções Javascript](./modulo-1-sincronia-de-funcoes-javascript)
 - [x] [Módulo 2 - Manipulação de listas](./modulo-2-manipulacao-de-listas)
 - [x] [Módulo 3 - Introdução a desenvolvimento de testes automatizados](./modulo-3-testes-automatizados)

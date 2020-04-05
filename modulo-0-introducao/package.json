@@ -1,0 +1,11 @@
+{
+  "name": "modulo-0-introducao",
+  "version": "1.0.0",
+  "description": "- [x] Bem vindo ao #CursoNodeBR!\r - [x] Introdução ao Curso e Objetivos\r - [x] Tópicos abordados - O que aprenderei?\r - [x] Instalação e Configuração\r - [x] Introdução ao Node.js\r - [x] Conhecendo o gerenciador de pacotes NPM\r - [x] [Começando um projeto Node.js](#comecando-projeto-node-js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
