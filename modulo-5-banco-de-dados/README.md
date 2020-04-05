@@ -124,4 +124,6 @@ docker exec -it mongodb \
 
 `docker rm id_ou_nome_da_imagem`
 
+****
+
 <b>Note:</b> [outros comandos mais utilizados no docker](https://woliveiras.com.br/posts/comandos-mais-utilizados-no-docker/#Comoeuseiquaisasimagensdisponveisnomeurepositriolocal)
