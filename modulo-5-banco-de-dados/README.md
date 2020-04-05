@@ -18,20 +18,8 @@ Nosso projeto Multi-banco de dados 🚀
 - Trabalhando com multi-databases.
 - Trabalha fortemente com a orientação à objetos.
 
-
-**** 
-
-## Instalação do docker
-
-1. No Windows 10 home ou enterprise é necessário instalar o docker toolbox, acesso o [tutorial](https://docs.docker.com/toolbox/toolbox_install_windows/)
-
-- No item "Step 3: Verify your installation" do tutorial execute o "Docker Quickstart Terminal" (imagem 1), execute o comando "docker run hello-world" e verifique o resultado conforme a imagem 4.
-
-2. Após instalar o docker, segue o vídeo.
-
-3. Acessar o Adminer (interface): http://192.168.99.100:8080/ (no vídeo é demonstrado o link localhost:8080 porém no windows é necessário utilizar esse ip, o mesmo acontece no link do mongodb)
-
-4. Acessar o Mongodb: http://192.168.99.100:3000/ (no vídeo é demonstrado o link localhost:3000 porém no windows é necessário utilizar esse ip)
+![exemplo-tv-globinho](./imgs/exemplo-tv-globinho.png)
+![exemplo-banco-de-dados](./imgs/exemplo-banco-de-dados.png)
 
 **** 
 
@@ -44,57 +32,68 @@ Nosso projeto Multi-banco de dados 🚀
 - Configurando a imagem do postgres
 
 ```
-docker run \
-     --name postgres \
-     -e POSTGRES_USER=leticiacampos \
-     -e POSTGRES_PASSWORD=minhasenhasecreta \
-     -e POSTGRES_DB=heroes \
-     -p 5432:5432 \
-     -d \
+docker run
+     --name postgres
+     -e POSTGRES_USER=leticiacampos
+     -e POSTGRES_PASSWORD=minhasenhasecreta
+     -e POSTGRES_DB=heroes
+     -p 5432:5432
+     -d
      postgres
 ```
 
 - Ver as imagens instaladas na máquina
 
-` docker ps -a`
+`docker ps -a`
 
 - Entrar no container postgres
 
 `docker exec -it postgres /bin/bash`
 
-- Após entrar no container postgres, roda o comando abaixo para iniciar a interface
+- Sair do container
+
+`exit`
+
+- Após conseguir entrar e sair do container postgres, roda o comando abaixo para iniciar a interface
 
 ```
-docker run \
-     --name adminer \
-     -p 8080:8080 \
-     --link postgres:postgres \
-     -d \
+docker run
+     --name adminer
+     -p 8080:8080
+     --link postgres:postgres
+     -d
      adminer
 ```
+
+- Acesse `http://localhost:8080/`
+
+![rodando-docker-local](./imgs/rodando-docker-localmente.png)
+
+![acessando-docker-local](./imgs/acessando-docker-localmente.png)
+
 
 ## MongoDB
 
 - Configurando a imagem do MongoDB
 
 ```
-docker run \
-     --name mongodb \
-     -p 27017:27017 \
-     -e MONGO_INITDB_ROOT_USERNAME=admin \
-     -e MONGO_INITDB_ROOT_PASSWORD=senhaadmin \
-     -d \
+docker run
+     --name mongodb
+     -p 27017:27017
+     -e MONGO_INITDB_ROOT_USERNAME=admin
+     -e MONGO_INITDB_ROOT_PASSWORD=senhaadmin
+     -d
      mongo:4
 ```
 
 - Configurando um Client para o MongoDB
 
 ```
-docker run \
-     --name mongoclient \
-     -p 3000:3000 \
-     --link mongodb:mongodb \
-     -d \
+docker run
+     --name mongoclient
+     -p 3000:3000
+     --link mongodb:mongodb
+     -d
      mongoclient/mongoclient
 ```
 
@@ -105,6 +104,10 @@ docker exec -it mongodb \
      mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin \
      --eval "db.getSiblingDB('herois').createUser({user: 'leticiacampos', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"
 ```
+
+- Acesse `http://localhost:3000/`
+
+![mongo-db](./imgs/mongodb.png)
 
 ## Outros comandos necessários do docker
 
@@ -120,7 +123,7 @@ docker exec -it mongodb \
 
 `docker stop id_ou_nome_da_imagem`
 
-- Para Remover uma imagem da máquina:
+- Para remover uma imagem da máquina:
 
 `docker rm id_ou_nome_da_imagem`
 
