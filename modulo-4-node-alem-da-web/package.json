@@ -4,11 +4,14 @@
   "description": "Criando uma aplicação usando javascript, promises, testes, async/await com ferramentas de linha de comando fazendo um CRUD baseado em arquivos.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^7.1.1"
+  },
+  "dependencies": {
+    "commander": "^5.0.0"
   }
 }

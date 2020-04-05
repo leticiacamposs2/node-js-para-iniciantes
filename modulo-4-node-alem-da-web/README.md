@@ -8,10 +8,10 @@ Criando uma aplicação usando javascript, promises, testes, async/await com fer
 
 - [x] Introdução ao Capítulo
 - [x] Manipulando arquivos - READ
-- [ ] Manipulando arquivos - CREATE
-- [ ] Manipulando arquivos - DELETE
-- [ ] Manipulando arquivos - UPDATE
-- [ ] Criando ferramentas de linha de comando
+- [x] Manipulando arquivos - CREATE
+- [x] Manipulando arquivos - DELETE
+- [x] Manipulando arquivos - UPDATE
+- [x] Criando ferramentas de linha de comando
 
 
 ****
@@ -20,3 +20,8 @@ Criando uma aplicação usando javascript, promises, testes, async/await com fer
 
 `npm install commander` => Instala o pacote Commander para utilização de ferramentas de linha de comando.
 
+****
+
+## Resultado dos testes
+
+![resultado-teste-crud](./assets/resultado-teste-crud.png)
