@@ -1,0 +1,19 @@
+{
+  "name": "prj-atualizar-herois",
+  "version": "1.0.0",
+  "description": "- `npm install sequelize`\r - `npm install pg-hstore pg`\r - `npm i --save-dev mocha`",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/tests/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.0.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.6"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}

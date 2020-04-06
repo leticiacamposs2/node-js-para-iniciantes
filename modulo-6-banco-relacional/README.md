@@ -7,5 +7,5 @@
 - [x] [Conhecendo o Sequelize](./sequelize)
 - [x] [Cadastrando Heróis - CREATE](./create-herois)
 - [x] [Listando Heróis - READ](./listar-herois)
-- [ ] [Atualizando Heróis - UPDATE](./atualizar-herois)
-- [ ] Removendo Hérois - DELETE
+- [x] [Atualizando Heróis - UPDATE](./atualizar-herois)
+- [x] [Removendo Hérois - DELETE](./remover-herois)

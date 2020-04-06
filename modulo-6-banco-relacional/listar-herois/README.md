@@ -1,3 +1,4 @@
-# Listando Heróis - CREATE
+# Listando Heróis - SELECT
 
 - `npm test` 
+- `npm run test:watch` 

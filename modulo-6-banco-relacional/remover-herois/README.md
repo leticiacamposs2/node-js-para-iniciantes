@@ -1,0 +1,1 @@
+# Remover Heróis - DELETE
