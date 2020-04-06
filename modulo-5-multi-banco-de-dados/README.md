@@ -89,7 +89,7 @@ docker run
 - Cria um usuário (admin) para acessar o mongo, também criar um banco de dados (herois) e realiza o login no mesmo
 
 ```
-docker exec -it mongodb \
+docker exec -it mongodb
      mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin \
      --eval "db.getSiblingDB('herois').createUser({user: 'leticiacampos', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"
 ```
