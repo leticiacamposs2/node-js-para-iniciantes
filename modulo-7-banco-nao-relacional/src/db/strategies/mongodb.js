@@ -1,6 +1,13 @@
 const ICrud = require('./interfaces/interfaceCrud')
 const Mongoose = require('mongoose')
 
+const STATUS = {
+    0: 'Disconectado',
+    1: 'Conectado',
+    2: 'Conectando',
+    3: 'Disconectando',
+}
+
 class MongoDB extends ICrud {
     constructor() {
         super()
@@ -8,12 +15,19 @@ class MongoDB extends ICrud {
         this._driver = null
     }
 
-    isConnected() {
+    async isConnected() {
+        const state = STATUS[this._driver.readyState]
+        if (state === 'Conectado') return state;
 
+        if (state !== 'Conectando') return state
+
+        await new Promise(resolve => setTimeout(resolve, 1000))
+
+        return STATUS[this._driver.readyState]
     }
 
     defineModel() {
-        this._herois = new Mongoose.Schema({
+        const heroiSchema = new Mongoose.Schema({
             nome: {
                 type: String,
                 required: true
@@ -28,7 +42,7 @@ class MongoDB extends ICrud {
             }
         })
 
-        const model = Mongoose.model('herois', this._herois)
+        this._herois = Mongoose.model('heroes', heroiSchema)
     }
 
     connected() {
@@ -39,11 +53,20 @@ class MongoDB extends ICrud {
             })
 
         const connection = Mongoose.connection
+        this._driver = Mongoose.connection
         connection.once('open', () => console.log('database rodando'))
     }
 
-    create(item) {
-        console.log('O item foi salvo em MongoDB')
+    async create(item) {
+        const resultCadastrar = await model.create({
+            nome: 'Batman',
+            poder: 'Dinheiro'
+        })
+        console.log('result cadastrar', resultCadastrar)
+
+        const listItens = await model.find()
+        console.log('itens', listItens)
+
     }
 }
 
