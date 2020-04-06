@@ -33,3 +33,19 @@ const heroiSchema = new Mongoose.Schema({
         default: new Date()
     }
 })
+
+const model = Mongoose.model('herois', heroiSchema)
+
+async function main() {
+    const resultCadastrar = await model.create({
+        nome: 'Batman',
+        poder: 'Dinheiro'
+    })
+    console.log('result cadastrar', resultCadastrar)
+
+    const listItens = await model.find()
+    console.log('itens', listItens)
+
+}
+
+main()
