@@ -1,0 +1,1 @@
+# Conhecendo o Sequelize
