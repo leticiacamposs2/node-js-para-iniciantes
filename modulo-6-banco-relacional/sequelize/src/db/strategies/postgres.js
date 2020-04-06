@@ -1,4 +1,5 @@
 const ICrud = require('./interfaces/interfaceCrud')
+const Sequelize = require('sequelize')
 
 class Postgres extends ICrud {
     constructor() {
@@ -33,7 +34,7 @@ class Postgres extends ICrud {
         )
     }
 
-    defineModel() {
+    async defineModel() {
         this._herois = driver.define('herois', {
             id: {
                 type: Sequelize.INTEGER,
