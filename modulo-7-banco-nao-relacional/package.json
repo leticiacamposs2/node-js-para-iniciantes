@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mongoose": "^5.9.7",
     "pg": "^8.0.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.6"
