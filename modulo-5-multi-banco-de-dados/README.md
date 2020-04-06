@@ -8,7 +8,7 @@ Nosso projeto Multi-banco de dados 🚀
 - [x] Criando projetos multi-bancos de dados
 - [x] Trabalhando com o padrão Strategy para multi datasources
 - [x] Design Patterns - Strategy
-- [ ] [Demonstração multi datasources com strategy design pattern](./design-patterns)
+- [x] [Demonstração multi datasources com strategy design pattern](./design-patterns)
 
 ****
 
