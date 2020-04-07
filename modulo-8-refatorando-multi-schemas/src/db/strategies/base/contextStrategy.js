@@ -1,9 +1,7 @@
 const ICrud = require('../interfaces/interfaceCrud')
 
 class ContextStrategy extends ICrud {
-    // A estratégia indicará qual banco de dados será utilizado: Postgres ou MongoDB
     constructor(strategy) {
-        // super chama o construtor da classe mãe
         super();
         this._database = strategy
     }
@@ -28,7 +26,7 @@ class ContextStrategy extends ICrud {
         return this._database.isConnected();
     }
     
-    connect() {
+    static connect() {
         return this._database.connect();
     }
 }
