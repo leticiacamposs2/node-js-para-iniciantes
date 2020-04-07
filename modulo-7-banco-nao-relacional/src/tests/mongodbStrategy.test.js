@@ -25,8 +25,8 @@ describe('Mongo Strategy', function () {
     this.beforeAll(async () => {
         await context.connect()
         await context.create(MOCK_HEROI_DEFAULT)
-        // const result = await context.create(MOCK_HEROI_ATUALIZAR)
-        // MOCK_HEROI_ID = result._id;
+        const result = await context.create(MOCK_HEROI_ATUALIZAR)
+        MOCK_HEROI_ID = result._id;
     })
 
     it('verificar conexao', async () => {
@@ -47,5 +47,12 @@ describe('Mongo Strategy', function () {
             nome, poder
         }
         assert.deepEqual(result, MOCK_HEROI_DEFAULT)
+    })
+
+    it('atualizar', async () => {
+        const result = await context.update(MOCK_HEROI_ID, {
+            nome: 'Pernalonga'
+        })
+        assert.deepEqual(result.nModified, 1)
     })
 })
