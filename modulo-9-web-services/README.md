@@ -5,8 +5,8 @@
 - [x] Introdução ao Capítulo
 - [x] [Conhecendo o Módulo HTTP](./modulo-http)
 - [x] Introdução ao Hapi.js
-- [ ] [Criando estrutura para criação de APIs com Hapi.js](./api-com-hapi)
-- [ ] Entendendo o padrão RestFull para desenvolvimento de APIs
+- [x] [Criando estrutura para criação de APIs com Hapi.js](./api-com-hapi)
+- [x] [Entendendo o padrão RestFull para desenvolvimento de APIs](./padrao-restfull)
 - [ ] Listando Heróis - GET
 - [ ] Listando Heróis - Validando requisições com Joi
 - [ ] Cadastrando Heróis - POST
