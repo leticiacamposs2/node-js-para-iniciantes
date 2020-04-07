@@ -1,4 +1,4 @@
-# Entendendo o padrão RestFull para desenvolvimento de APIs 🤯
+# 🤯 Entendendo o padrão RestFull para desenvolvimento de APIs
 
 
 ## Diferenças Rest x Restfull
@@ -30,12 +30,12 @@
 
 ## Padrões de URL
 
-- GET - /heroes
-- POST - /heroes
-- PUT - /heroes/:id -> body { name, date, power }
-- PATCH - /heroes/:id -> body { name }
-- DELETE - /heroes/:id
+- `GET - /heroes`
+- `POST - /heroes`
+- `PUT - /heroes/:id` -> body { name, date, power }
+- `PATCH - /heroes/:id` -> body { name }
+- `DELETE - /heroes/:id`
 
-- GET - /heroes/:id (filtra por id)
-- GET - /heroes/:id/headquarters (filtra por id e lista os headquartes existentes)
-- GET - /heroes/:id/headquarters/:id (filtra por id e trás o headquartes especifico)
+- `GET - /heroes/:id` - filtra por id
+- `GET - /heroes/:id/headquarters` - filtra por id e lista os headquartes existentes
+- `GET - /heroes/:id/headquarters/:id` - filtra por id e trás o headquartes especifico
