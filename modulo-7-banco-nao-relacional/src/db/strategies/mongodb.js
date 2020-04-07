@@ -72,7 +72,7 @@ class MongoDB extends ICrud {
     }
 
     delete(id) {
-        return this._heroes.deleteOne({ _id: id })
+        return this._herois.deleteOne({ _id: id })
     }
 }
 
