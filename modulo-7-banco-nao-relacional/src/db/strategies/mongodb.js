@@ -42,10 +42,10 @@ class MongoDB extends ICrud {
             }
         })
 
-        this._herois = Mongoose.model('heroes', heroiSchema)
+        this._herois = Mongoose.model('herois', heroiSchema)
     }
 
-    connected() {
+    connect() {
         Mongoose.connect('mongodb://leticiacampos:minhasenhasecreta@localhost:27017/herois',
             { useNewUrlParser: true }, function (error) {
                 if (!error) return;
@@ -55,18 +55,15 @@ class MongoDB extends ICrud {
         const connection = Mongoose.connection
         this._driver = Mongoose.connection
         connection.once('open', () => console.log('database rodando'))
+        this.defineModel()
     }
 
-    async create(item) {
-        const resultCadastrar = await model.create({
-            nome: 'Batman',
-            poder: 'Dinheiro'
-        })
-        console.log('result cadastrar', resultCadastrar)
+    create(item) {
+        return this._herois.create(item)
+    }
 
-        const listItens = await model.find()
-        console.log('itens', listItens)
-
+    read(item, skip=0, limit=10) {
+        return this._herois.find(item).skip(skip).limit(limit)
     }
 }
 
