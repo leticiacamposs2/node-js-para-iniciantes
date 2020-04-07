@@ -7,8 +7,8 @@
 - [x] Conhecendo o Mongoose
 - [x] Cadastrando Heróis - CREATE
 - [x] Listando Heróis - READ
-- [ ] Atualizando Heróis - UPDATE
-- [ ] Removendo Hérois - DELETE
+- [x] Atualizando Heróis - UPDATE
+- [x] Removendo Hérois - DELETE
 
 ## Comandos docker
 

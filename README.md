@@ -13,8 +13,8 @@ Repositório com o conteúdo das aulas.
 - [x] [Módulo 4 - Node.js além da Web - Criando ferramentas de linha de comando](./modulo-4-node-alem-da-web)
 - [x] [Módulo 5 - Bancos de Dados - Nosso projeto Multi-banco de dados](./modulo-5-multi-banco-de-dados)
 - [x] [Módulo 6 - Introdução ao Postgres e Bancos Relacionais](./modulo-6-banco-relacional)
-- [ ] [Módulo 7 - Introdução ao MongoDB e Bancos Não-Relacionais (NoSQL)](./modulo-7-banco-nao-relacional)
-- [ ] Módulo 8 - Refatorando nosso projeto para bancos de dados multi-schemas
+- [x] [Módulo 7 - Introdução ao MongoDB e Bancos Não-Relacionais (NoSQL)](./modulo-7-banco-nao-relacional)
+- [ ] [Módulo 8 - Refatorando nosso projeto para bancos de dados multi-schemas](./modulo-8-refatorando-multi-schemas)
 - [ ] Módulo 9 - Node.js e Web Services - Criando serviços profissionais com Hapi.js
 - [ ] Módulo 10 - Documentação de Serviços com Swagger
 - [ ] Módulo 11 - Autenticação com Json Web Token
