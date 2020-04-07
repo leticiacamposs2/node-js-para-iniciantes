@@ -3,5 +3,5 @@
 ## Aulas
 
 - [x] Introdução ao Capítulo
-- [ ] Refatorando a estratégia de MongoDB para multi-schemas
-- [ ] Refatorando a estratégia de Postgres para multi-schemas
+- [x] Refatorando a estratégia de MongoDB para multi-schemas
+- [x] Refatorando a estratégia de Postgres para multi-schemas
