@@ -11,7 +11,7 @@
 - [x] [Listando Heróis - Validando requisições com Joi](./padrao-restfull)
 - [x] [Cadastrando Heróis - POST](./padrao-restfull)
 - [x] [Atualizando Heróis - PATCH / PUT](./padrao-restfull)
-- [ ] [Removendo Heróis - DELETE](./padrao-restfull)
+- [x] [Removendo Heróis - DELETE](./padrao-restfull)
 
 ***
 

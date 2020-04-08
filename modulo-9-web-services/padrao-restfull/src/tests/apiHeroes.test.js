@@ -112,4 +112,17 @@ describe('Suite de testes da API Heroes', function () {
         assert.ok(statusCode === 200)
         assert.deepEqual(dados.message, 'Não foi possível atualizar')
     })
+
+    it('remover DELETE - /herois/:id', async () => {
+        const _id = MOCK_ID
+        const result = await app.inject({
+            method: 'DELETE',
+            url: `/herois/${_id}`
+        })
+        const statusCode = result.statusCode
+        const dados = JSON.parse(result.payload)
+
+        assert.ok(statusCode === 200)
+        assert.deepEqual(dados.message, 'Heroi removido com sucesso')
+    })
 })
