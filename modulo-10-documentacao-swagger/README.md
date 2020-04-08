@@ -1,0 +1,1 @@
+- `npm i hapi-swagger@9.1.3` 
