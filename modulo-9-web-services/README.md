@@ -9,8 +9,8 @@
 - [x] [Entendendo o padrão RestFull para desenvolvimento de APIs](./padrao-restfull)
 - [x] [Listando Heróis - GET](./padrao-restfull)
 - [x] [Listando Heróis - Validando requisições com Joi](./padrao-restfull)
-- [ ] [Cadastrando Heróis - POST](./padrao-restfull)
-- [ ] [Atualizando Heróis - PATCH / PUT](./padrao-restfull)
+- [x] [Cadastrando Heróis - POST](./padrao-restfull)
+- [x] [Atualizando Heróis - PATCH / PUT](./padrao-restfull)
 - [ ] [Removendo Heróis - DELETE](./padrao-restfull)
 
 ***
