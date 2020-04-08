@@ -31,9 +31,19 @@ class HeroRoutes extends BaseRoute {
                 try {
                     const { skip, limit, nome } = request.query
                     
-                    const query = nome ? { nome: nome } : {}
+                    // const query = nome ? { nome: nome } : {}
+                    // dessa forma ele filtra literalmente o nome digitado exemplo "homem aranha"
 
-                    return this.db.read(query, parseInt(skip), parseInt(limit))
+                    // modificando um pouco se eu digitar aranh
+                    // consigo filtrar tudo o que contem no nome a palavra aranh
+
+                    const query = {
+                        nome: {
+                            $regex: `.*${nome}*.`
+                        }
+                    }
+
+                    return this.db.read(nome ? query : {}, skip, limit)
                 }
                 catch (error) {
                     console.log('Erro: ', error)
