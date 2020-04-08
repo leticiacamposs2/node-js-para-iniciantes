@@ -17,7 +17,7 @@ Repositório com o conteúdo das aulas.
 - [x] [Módulo 08 - Refatorando nosso projeto para bancos de dados multi-schemas](./modulo-08-refatorando-multi-schemas)
 - [x] [Módulo 09 - Node.js e Web Services - Criando serviços profissionais com Hapi.js](./modulo-09-web-services)
 - [x] [Módulo 10 - Documentação de Serviços com Swagger](./modulo-10-documentacao-swagger)
-- [ ] Módulo 11 - Autenticação com Json Web Token
+- [ ] [Módulo 11 - Autenticação com Json Web Token](./modulo-11-json-web-token)
 - [ ] Módulo 12 - Publicação de serviços na Web
 - [ ] Módulo 13 - Próximos passos
 
