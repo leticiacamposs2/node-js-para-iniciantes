@@ -1,9 +1,14 @@
-const BaseRoute = require('./base/baseRoutes')
 const Joi = require('joi')
+const Boom = require('boom')
+const BaseRoute = require('./base/baseRoutes')
 
 const failAction = (request, headers, erro) => {
     throw erro;
 }
+
+const headers = Joi.object({
+    authorization: Joi.string().required()
+}).unknown()
 
 class HeroRoutes extends BaseRoute {
     constructor(db) {
@@ -18,42 +23,30 @@ class HeroRoutes extends BaseRoute {
             config: {
                 tags: ['api'],
                 description: 'Deve listar herois',
-                notes: 'pode paginar resultados e filtar por nome',
+                notes: 'Pode paginar resultados e filtrar por nome',
                 validate: {
                     // Mensagem sobre a exceção
-                    // payload -> body
-                    // headers -> header
-                    // params -> na URL : id
-                    // query -> ?skip=10&limit=100
                     failAction,
                     query: {
                         skip: Joi.number().integer().default(0),
                         limit: Joi.number().integer().default(10),
                         nome: Joi.string().min(3).max(100)
-                    }
+                    },
+                    headers
                 }
             },
             handler: (request, headers) => {
                 try {
                     const { skip, limit, nome } = request.query
-                    
-                    // const query = nome ? { nome: nome } : {}
-                    // dessa forma ele filtra literalmente o nome digitado exemplo "homem aranha"
 
-                    // modificando um pouco se eu digitar aranh
-                    // consigo filtrar tudo o que contem no nome a palavra aranh
-
-                    const query = {
-                        nome: {
-                            $regex: `.*${nome}*.`
-                        }
-                    }
+                    const query = nome ? { nome: { $regex: `.*${nome}*.` } } : {}
 
                     return this.db.read(nome ? query : {}, skip, limit)
                 }
                 catch (error) {
                     console.log('Erro: ', error)
-                    return "Erro interno no servidor"
+                    // return "Erro interno no servidor"
+                    return Boom.internal()
                 }
             }
         }
@@ -65,10 +58,11 @@ class HeroRoutes extends BaseRoute {
             method: 'POST',
             config: {
                 tags: ['api'],
-                description: 'Deve cadastrar herois',
-                notes: 'deve cadastrar heroi por nome e poder',
+                description: 'Deve cadastrar heroi',
+                notes: 'Deve castrar heroi por nome e poder',
                 validate: {
                     failAction,
+                    headers,
                     payload: {
                         nome: Joi.string().required().min(3).max(100),
                         poder: Joi.string().required().min(2).max(100)
@@ -86,12 +80,11 @@ class HeroRoutes extends BaseRoute {
                 }
                 catch (error) {
                     console.log('Erro: ', error)
-                    return error
+                    return Boom.internal()
                 }
             }
         }
     }
-
     update() {
         return {
             path: '/herois/{id}',
@@ -104,6 +97,7 @@ class HeroRoutes extends BaseRoute {
                     params: {
                         id: Joi.string().required()
                     },
+                    headers,
                     payload: {
                         nome: Joi.string().min(3).max(100),
                         poder: Joi.string().min(2).max(100)
@@ -119,31 +113,29 @@ class HeroRoutes extends BaseRoute {
                     const dados = JSON.parse(dadosString)
 
                     const result = await this.db.update(id, dados)
-                    if (result.nModified !== 1) return {
-                        message: 'Não foi possível atualizar'
-                    }
+                    if (result.nModified !== 1) return Boom.preconditionFailed('Id não encontrado no banco')
                     return {
                         message: 'Heroi atualizado com sucesso'
                     }
                 }
                 catch (error) {
                     console.log('Erro: ', error)
-                    return 'Erro interno'
+                    return Boom.internal()
                 }
             }
         }
     }
-
     delete() {
         return {
             path: '/herois/{id}',
             method: 'DELETE',
             config: {
                 tags: ['api'],
-                description: 'Deve remover o heroi por id',
-                notes: 'O id tem que ser válido',                
+                description: 'Deve excluir heroi por id',
+                notes: 'Id tem que ser válido',
                 validate: {
                     failAction,
+                    headers,
                     params: {
                         id: Joi.string().required()
                     }

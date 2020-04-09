@@ -14,8 +14,8 @@ describe('Auth test suite', function () {
             method: 'POST',
             url: '/login',
             payload: {
-                username: 'a',
-                password: 'a'
+                username: 'leticia',
+                password: '123'
             }
         })
 

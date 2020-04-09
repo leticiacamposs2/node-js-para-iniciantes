@@ -25,4 +25,4 @@ Aprendendo conceitos de manipulação de usuários, autenticação e padrão Jso
 ## Pacotes utilizados
 
 - `npm i jsonwebtoken` - gera um token de identificação
-- `npm i hapi-auth-jwt2`
+- `npm i hapi-auth-jwt2` - intercepta todas as requisições de forma que todos os serviços tenham que pasasr um token válido

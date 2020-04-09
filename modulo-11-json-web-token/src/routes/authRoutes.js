@@ -8,8 +8,8 @@ const failAction = (request, headers, erro) => {
 }
 
 const USER = {
-    username: 'a',
-    password: 'a'
+    username: 'leticia',
+    password: '123'
 }
 
 class AuthRoutes extends BaseRoute {
