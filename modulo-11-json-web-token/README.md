@@ -18,7 +18,7 @@ Aprendendo conceitos de manipulação de usuários, autenticação e padrão Jso
 - [x] Introdução ao Capítulo
 - [x] Como funciona o Json Web Token?
 - [x] Configurando o JWT - plugins, testes e rota de login
-- [ ] Criando o módulo de autenticação de usuários e hash de senha com bcrypt
+- [x] Criando o módulo de autenticação de usuários e hash de senha com bcrypt
 
 ***
 
@@ -26,3 +26,4 @@ Aprendendo conceitos de manipulação de usuários, autenticação e padrão Jso
 
 - `npm i jsonwebtoken` - gera um token de identificação
 - `npm i hapi-auth-jwt2` - intercepta todas as requisições de forma que todos os serviços tenham que pasasr um token válido
+- `npm install bcrypt` - cria senhas criptografadas

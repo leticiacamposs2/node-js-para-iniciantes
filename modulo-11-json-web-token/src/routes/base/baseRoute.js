@@ -4,4 +4,5 @@ class BaseRoute {
             .filter(method => method !== 'constructor' && !method.startsWith('_'))
     }
 }
+
 module.exports = BaseRoute

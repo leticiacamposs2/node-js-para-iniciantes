@@ -1,5 +1,4 @@
-const Mongoose = require('mongoose')
-
+const Mongoose=  require('mongoose')
 const heroiSchema = new Mongoose.Schema({
     nome: {
         type: String,
@@ -9,10 +8,11 @@ const heroiSchema = new Mongoose.Schema({
         type: String,
         required: true
     },
-    inseredAt: {
+    insertedAt: {
         type: Date,
         default: new Date()
     }
 })
 
-module.exports = Mongoose.model('herois', heroiSchema)
+//mocha workaround
+module.exports = Mongoose.models.herois || Mongoose.model('herois', heroiSchema)

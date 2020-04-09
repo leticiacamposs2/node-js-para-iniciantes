@@ -1,14 +1,5 @@
+const BaseRoute = require('./base/baseRoute')
 const Joi = require('joi')
-const Boom = require('boom')
-const BaseRoute = require('./base/baseRoutes')
-
-const failAction = (request, headers, erro) => {
-    throw erro;
-}
-
-const headers = Joi.object({
-    authorization: Joi.string().required()
-}).unknown()
 
 class HeroRoutes extends BaseRoute {
     constructor(db) {
@@ -22,66 +13,44 @@ class HeroRoutes extends BaseRoute {
             method: 'GET',
             config: {
                 tags: ['api'],
-                description: 'Deve listar herois',
-                notes: 'Pode paginar resultados e filtrar por nome',
+                description: 'listar herois',
+                notes: 'retorna a base inteira de herois',
                 validate: {
-                    // Mensagem sobre a exceção
-                    failAction,
-                    query: {
-                        skip: Joi.number().integer().default(0),
-                        limit: Joi.number().integer().default(10),
-                        nome: Joi.string().min(3).max(100)
-                    },
-                    headers
+                    headers: Joi.object({
+                        authorization: Joi.string().required()
+                    }).unknown()
                 }
             },
             handler: (request, headers) => {
-                try {
-                    const { skip, limit, nome } = request.query
-
-                    const query = nome ? { nome: { $regex: `.*${nome}*.` } } : {}
-
-                    return this.db.read(nome ? query : {}, skip, limit)
-                }
-                catch (error) {
-                    console.log('Erro: ', error)
-                    // return "Erro interno no servidor"
-                    return Boom.internal()
-                }
+                return this.db.read()
             }
         }
     }
-
     create() {
         return {
             path: '/herois',
             method: 'POST',
             config: {
                 tags: ['api'],
-                description: 'Deve cadastrar heroi',
-                notes: 'Deve castrar heroi por nome e poder',
+                description: 'cadastrar herois',
+                notes: 'Cadastra um heroi por nome e poder',
                 validate: {
-                    failAction,
-                    headers,
+                    failAction: (request, h, err) => {
+                        throw err;
+                    },
+                    headers: Joi.object({
+                        authorization: Joi.string().required()
+                    }).unknown(),
                     payload: {
-                        nome: Joi.string().required().min(3).max(100),
-                        poder: Joi.string().required().min(2).max(100)
+                        nome: Joi.string().max(100).required(),
+                        poder: Joi.string().max(30).required()
                     }
-                }
+                },
+
             },
-            handler: async (request) => {
-                try {
-                    const { nome, poder } = request.payload
-                    const result = await this.db.create({ nome, poder })
-                    return {
-                        message: 'Heroi cadastrado com sucesso',
-                        _id: result._id
-                    }
-                }
-                catch (error) {
-                    console.log('Erro: ', error)
-                    return Boom.internal()
-                }
+            handler: (request, headers) => {
+                const payload = request.payload
+                return this.db.create(payload)
             }
         }
     }
@@ -91,37 +60,29 @@ class HeroRoutes extends BaseRoute {
             method: 'PATCH',
             config: {
                 tags: ['api'],
-                description: 'Deve atualizar heroi por id',
-                notes: 'Pode atualizar qualquer campo',
+                description: 'atualizar herois',
+                notes: 'atualiza um heroi por ID',
                 validate: {
+                    failAction: (request, h, err) => {
+                        throw err;
+                    },
+                    headers: Joi.object({
+                        authorization: Joi.string().required()
+                    }).unknown(),
                     params: {
                         id: Joi.string().required()
                     },
-                    headers,
                     payload: {
-                        nome: Joi.string().min(3).max(100),
-                        poder: Joi.string().min(2).max(100)
+                        nome: Joi.string().max(100),
+                        poder: Joi.string().max(30)
                     }
-                }
+                },
+
             },
-            handler: async (request) => {
-                try {
-                    const { id } = request.params;
-
-                    const { payload } = request
-                    const dadosString = JSON.stringify(payload)
-                    const dados = JSON.parse(dadosString)
-
-                    const result = await this.db.update(id, dados)
-                    if (result.nModified !== 1) return Boom.preconditionFailed('Id não encontrado no banco')
-                    return {
-                        message: 'Heroi atualizado com sucesso'
-                    }
-                }
-                catch (error) {
-                    console.log('Erro: ', error)
-                    return Boom.internal()
-                }
+            handler: (request, headers) => {
+                const payload = request.payload;
+                const id = request.params.id;
+                return this.db.update(id, payload)
             }
         }
     }
@@ -131,35 +92,27 @@ class HeroRoutes extends BaseRoute {
             method: 'DELETE',
             config: {
                 tags: ['api'],
-                description: 'Deve excluir heroi por id',
-                notes: 'Id tem que ser válido',
+                description: 'remover herois',
+                notes: 'remove um heroi por id',
                 validate: {
-                    failAction,
-                    headers,
+                    failAction: (request, h, err) => {
+                        throw err;
+                    },
+                    headers: Joi.object({
+                        authorization: Joi.string().required()
+                    }).unknown(),
                     params: {
                         id: Joi.string().required()
                     }
                 }
             },
-            handler: async (request) => {
-                try {
-                    const { id } = request.params
-                    const result = await this.db.delete(id)
-                    if (result.n !== 1) {
-                        return Boom.preconditionFailed('Id não encontrado no banco')
-                    }
-                    return {
-                        message: "Heroi removido com sucesso"
-                    }
-
-                }
-                catch (error) {
-                    console.log("Erro: ", error)
-                    return Boom.internal()
-                }
+            handler: (request, headers) => {
+                const id = request.params.id;
+                return this.db.delete(id)
             }
         }
     }
+
 }
 
 module.exports = HeroRoutes
