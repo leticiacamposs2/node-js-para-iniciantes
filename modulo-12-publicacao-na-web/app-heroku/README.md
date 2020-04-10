@@ -23,4 +23,4 @@
 
 - `heroku login`
 - `heroku apps:list` - lista tudo o que tem na nossa conta publicado
-- `heroku apps:create` - 
+- `heroku apps:create cursonodebr-leticiacampos` - Gera a url com esse comando, nesse caso: https://cursonodebr-leticiacampos.herokuapp.com/ e https://git.heroku.com/cursonodebr-leticiacampos.git
