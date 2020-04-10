@@ -1,5 +1,6 @@
 const ICrud = require('../base/interfaceDb')
 const Mongoose = require('mongoose')
+
 const STATUS = {
     0: 'Disconectado',
     1: 'Conectado',
@@ -7,14 +8,12 @@ const STATUS = {
     3: 'Disconectando',
 }
 class MongoDB extends ICrud {
-    // 3o
     constructor(connection, schema) {
         super()
-        // 4o
         this._connection = connection;
         this._collection = schema;
     }
-    // 2o
+
     async isConnected() {
         const state = STATUS[this._connection.readyState]
         if (state === 'Conectado') return state;
@@ -26,9 +25,9 @@ class MongoDB extends ICrud {
         return STATUS[this._connection.readyState]
 
     }
-     // 1o 
+
     static connect() {
-        Mongoose.connect('mongodb://leticiacampos:minhasenhasecreta@localhost:27017/herois', {
+        Mongoose.connect(process.env.MONGODB_URL, {
             useNewUrlParser: true
         }, function (error) {
             if (!error) return;
@@ -42,9 +41,11 @@ class MongoDB extends ICrud {
     async create(item) {
         return this._collection.create(item)
     }
+    
     async read(item = {}) {
         return this._collection.find(item, { nome: 1, poder: 1, insertedAt: 1})
     }
+
     async update(id, item) {
         return this._collection.updateOne({_id: id}, { $set: item})
     }

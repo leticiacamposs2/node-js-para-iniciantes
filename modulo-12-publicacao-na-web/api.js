@@ -1,3 +1,16 @@
+const { config } = require('dotenv')
+const { join } = require('path')
+const { ok } = require('assert')
+
+const env = process.env.NODE_DEV || "dev"
+ok(env === "prod" || env === "dev", "a env é inválida, ou dev ou prod")
+
+const configPath = join(__dirname, './config', `.env.${env}`)
+
+config({
+    path: configPath
+})
+
 const Hapi = require('hapi')
 const Context = require('./src/db/strategies/base/contextStrategy')
 const MongoDB = require('./src/db/strategies/mongodb/mongoDbStrategy')
@@ -15,7 +28,7 @@ const Inert = require('inert')
 const Vision = require('vision')
 const Jwt = require('jsonwebtoken')
 const HapiJwt = require('hapi-auth-jwt2')
-const MINHA_CHAVE_SECRETA = 'ESSA_E_TRETA'
+const MINHA_CHAVE_SECRETA = process.env.JWT_KEY
 
 const swaggerConfig = {
     info: {
@@ -27,7 +40,7 @@ const swaggerConfig = {
 }
 
 const app = new Hapi.Server({
-    port: 4000
+    port: process.env.PORT
 })
 
 function mapRoutes(instance, methods) {

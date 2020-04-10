@@ -2,9 +2,9 @@
 
 ## Aulas
 
-- [ ] Introdução ao Capítulo
-- [ ] Trabalhando com multi-environments (development, production)
-- [ ] MongoDB online e gratuito com Mongo Lab
+- [x] Introdução ao Capítulo
+- [x] Trabalhando com multi-environments (development, production)
+- [x] MongoDB online e gratuito com Mongo Lab
 - [ ] Publicação de nossos serviços e bancos de dados gratuitos com Heroku
 - [ ] Trabalhando com PM2 para gerência de apps
 - [ ] Expondo cobertura de código com Instanbul
