@@ -28,3 +28,8 @@
 - `git init`  
 - `heroku git:remote --app cursonodebr-leticiacamposs2` - retorna: set git remote heroku to https://git.heroku.com/cursonodebr-leticiacamposs2.git
 - `heroku apps:destroy` - caso queira excluir um app heroku 
+
+- `git add .`
+- `git commit -m "v1"` 
+- `git push heroku master` - gera a url https://git.heroku.com/cursonodebr-leticiacamposs2.git
+- `heroku logs` 

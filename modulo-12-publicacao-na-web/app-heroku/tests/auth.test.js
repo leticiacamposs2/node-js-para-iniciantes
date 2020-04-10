@@ -11,8 +11,8 @@
 const assert = require('assert')
 const api = require('../api')
 const Context = require('./../src/db/strategies/base/contextStrategy')
-const PostgresDB = require('./../src/db/strategies/postgres/postgresSQLStrategy')
-const UserSchema = require('./../src/db/strategies/postgres/schemas/userSchema')
+// const PostgresDB = require('./../src/db/strategies/postgres/postgresSQLStrategy')
+// const UserSchema = require('./../src/db/strategies/postgres/schemas/userSchema')
 
 let app = {}
 const USER = {
@@ -30,10 +30,10 @@ describe('Auth test suite', function () {
     this.beforeAll(async () => {
         app = await api
 
-        const connectionPostgres = await PostgresDB.connect()
-        const model = await PostgresDB.defineModel(connectionPostgres, UserSchema)
-        const postgresModel = new Context(new PostgresDB(connectionPostgres, model));
-        await postgresModel.update(null, USER_DB, true)
+        // const connectionPostgres = await PostgresDB.connect()
+        // const model = await PostgresDB.defineModel(connectionPostgres, UserSchema)
+        // const postgresModel = new Context(new PostgresDB(connectionPostgres, model));
+        // await postgresModel.update(null, USER_DB, true)
     })
     it('deve obter um token', async () => {
         const result = await app.inject({

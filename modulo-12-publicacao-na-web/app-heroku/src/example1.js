@@ -27,14 +27,14 @@ class MongoDBStrategy extends ICrud {
     console.log('MongoDBStrategy');
   }
 }
-class PostgreSQLStrategy extends ICrud {
-  constructor() {
-    super();
-  }
-  create(item) {
-    console.log('PostgreSQLStrategy');
-  }
-}
+// class PostgreSQLStrategy extends ICrud {
+//   constructor() {
+//     super();
+//   }
+//   create(item) {
+//     console.log('PostgreSQLStrategy');
+//   }
+// }
 
 class ContextoStrategy extends ICrud {
   constructor(database) {
@@ -57,7 +57,7 @@ class ContextoStrategy extends ICrud {
 
 const contextMongo = new ContextoStrategy(new MongoDBStrategy());
 contextMongo.create();
-const context = new ContextoStrategy(new PostgreSQLStrategy());
-context.create();
+// const context = new ContextoStrategy(new PostgreSQLStrategy());
+// context.create();
 
 context.read();

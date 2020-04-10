@@ -18,9 +18,9 @@ const MongoDB = require('./src/db/strategies/mongodb/mongoDbStrategy')
 const HeroRoutes = require('./src/routes/heroRoutes')
 const HeroSchema = require('./src/db/strategies/mongodb/schemas/heroSchema')
 
-const PostgresDB = require('./src/db/strategies/postgres/postgresSQLStrategy')
+// const PostgresDB = require('./src/db/strategies/postgres/postgresSQLStrategy')
 const AuthRoutes = require('./src/routes/authRoutes')
-const UserSchema = require('./src/db/strategies/postgres/schemas/userSchema')
+// const UserSchema = require('./src/db/strategies/postgres/schemas/userSchema')
 
 
 const HapiSwagger = require('hapi-swagger')
@@ -48,9 +48,9 @@ function mapRoutes(instance, methods) {
 }
 
 async function main() {
-    const connectionPostgres = await PostgresDB.connect()
-    const model = await PostgresDB.defineModel(connectionPostgres, UserSchema)
-    const postgresModel = new Context(new PostgresDB(connectionPostgres, model));
+    // const connectionPostgres = await PostgresDB.connect()
+    // const model = await PostgresDB.defineModel(connectionPostgres, UserSchema)
+    // const postgresModel = new Context(new PostgresDB(connectionPostgres, model));
 
     const connection = MongoDB.connect()
     const mongoDb = new Context(new MongoDB(connection, HeroSchema))
@@ -83,7 +83,7 @@ async function main() {
 
     app.route([
         ...mapRoutes(new HeroRoutes(mongoDb), HeroRoutes.methods()),
-        ...mapRoutes(new AuthRoutes(MINHA_CHAVE_SECRETA, postgresModel), AuthRoutes.methods())
+        // ...mapRoutes(new AuthRoutes(MINHA_CHAVE_SECRETA, postgresModel), AuthRoutes.methods())
     ])
 
     await app.start()

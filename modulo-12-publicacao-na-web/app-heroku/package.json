@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/*.test.js",
+    "test": "mocha --timeout 10000 tests/*.test.js",
     "test:prod": "cross-env NODE_ENV=prod npm t",
-    "prod": "cross-env NODE_ENV=prod node api.js"
+    "prod": "cross-env NODE_ENV=prod node api.js",
+    "start": "node api.js"
   },
   "author": "leticiacampos",
   "license": "ISC",
@@ -16,6 +17,7 @@
   "dependencies": {
     "bcrypt": "^3.0.2",
     "boom": "^7.2.2",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "hapi": "^17.7.0",
     "hapi-auth-jwt2": "^8.1.0",
