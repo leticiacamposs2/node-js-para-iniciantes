@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/*.test.js"
+    "test": "mocha tests/*.test.js",
+    "test:prod": "cross-env NODE_ENV=prod npm t"
   },
   "author": "leticiacampos",
   "license": "ISC",

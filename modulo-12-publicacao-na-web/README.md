@@ -16,4 +16,5 @@
 - `npm i dotenv`
 - `npm i -g cross-env`
 - `cross-env NODE_ENV=prod npm t`
+- `npm run test:prod`
 - `npm install -g heroku`
