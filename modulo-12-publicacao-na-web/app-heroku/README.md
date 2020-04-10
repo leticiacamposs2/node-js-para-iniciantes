@@ -5,7 +5,7 @@
 - [x] Introdução ao Capítulo
 - [x] Trabalhando com multi-environments (development, production)
 - [x] MongoDB online e gratuito com Mongo Lab
-- [x] [Publicação de nossos serviços e bancos de dados gratuitos com Heroku](./app-heroku)
+- [ ] Publicação de nossos serviços e bancos de dados gratuitos com Heroku
 - [ ] Trabalhando com PM2 para gerência de apps
 - [ ] Expondo cobertura de código com Instanbul
 
@@ -18,3 +18,9 @@
 - `cross-env NODE_ENV=prod npm t`
 - `npm run test:prod`
 - `npm install -g heroku`
+
+## Comandos heroku
+
+- `heroku login`
+- `heroku apps:list` - lista tudo o que tem na nossa conta publicado
+- `heroku apps:create` - 
