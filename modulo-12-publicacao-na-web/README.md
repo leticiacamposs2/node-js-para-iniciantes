@@ -18,3 +18,13 @@
 - `cross-env NODE_ENV=prod npm t`
 - `npm run test:prod`
 - `npm install -g heroku`
+
+## Comandos heroku para publicação via terminal
+
+- `heroku login`
+- `heroku apps:list` - lista tudo o que tem na nossa conta publicado
+- `heroku apps:create cursonodebr-leticiacamposs2` - Gera a url com esse comando, nesse caso: https://cursonodebr-leticiacamposs2.herokuapp.com/ e https://git.heroku.com/cursonodebr-leticiacamposs2.git
+- `git remote -v`
+- `git init`  
+- `heroku git:remote --app cursonodebr-leticiacamposs2` - retorna: set git remote heroku to https://git.heroku.com/cursonodebr-leticiacamposs2.git
+- `heroku apps:destroy` - caso queira excluir um app heroku 
