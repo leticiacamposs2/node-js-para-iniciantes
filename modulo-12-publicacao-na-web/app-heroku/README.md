@@ -5,7 +5,7 @@
 - [x] Introdução ao Capítulo
 - [x] Trabalhando com multi-environments (development, production)
 - [x] MongoDB online e gratuito com Mongo Lab
-- [ ] Publicação de nossos serviços e bancos de dados gratuitos com Heroku
+- [x] Publicação de nossos serviços e bancos de dados gratuitos com Heroku
 - [ ] Trabalhando com PM2 para gerência de apps
 - [ ] Expondo cobertura de código com Instanbul
 
@@ -23,4 +23,4 @@
 
 - `heroku login`
 - `heroku apps:list` - lista tudo o que tem na nossa conta publicado
-- `heroku apps:create cursonodebr-leticiacampos` - Gera a url com esse comando, nesse caso: https://cursonodebr-leticiacampos.herokuapp.com/ e https://git.heroku.com/cursonodebr-leticiacampos.git
+- `heroku apps:create cursonodebr-leticiacamposs2` - Gera a url com esse comando, nesse caso: https://cursonodebr-leticiacamposs2.herokuapp.com/ e https://git.heroku.com/cursonodebr-leticiacamposs2.git
