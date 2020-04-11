@@ -6,8 +6,8 @@
 - [x] Trabalhando com multi-environments (development, production)
 - [x] MongoDB online e gratuito com Mongo Lab
 - [x] [Publicação de nossos serviços e bancos de dados gratuitos com Heroku](./app-heroku)
-- [x] Trabalhando com PM2 para gerência de apps
-- [ ] Expondo cobertura de código com Instanbul
+- [x] [Trabalhando com PM2 para gerência de apps](#pm2)
+- [ ] [Expondo cobertura de código com Instanbul](#instanbul)
 
 ***
 
@@ -37,6 +37,10 @@
 ## Link da aplicação
 
 - Documentação da API Herois: https://cursonodebr-leticiacamposs2.herokuapp.com/documentation#/
+
+***
+
+<div id="pm2">
 
 ## Trabalhando com PM2 para gerência de apps
 A aplicação esta no ar em produção, quais os problemas trabalhando com node.js? 
@@ -75,3 +79,24 @@ Objetivo: linkar o projeto ofline com o projeto online, desta forma qualquer pro
 <p></p>
 
 - `heroku config:set PM2_PUBLIC_KEY=(PASSSA A CHAVE) PM2_SECRET_KEY=(PASSA A SENHA)` - este comando consigura o PM2 ao heroku 
+
+***
+
+<div id="instanbul">
+
+## Expondo cobertura de código com Instanbul
+É a ferramenta que utilizamos para gerar a cobertura de código dos testes que escrevemos, [artigo que fala mais sobre isso](https://blog.getty.io/cobertura-de-c%C3%B3digo-no-seu-projeto-nodejs-usando-istanbul-f6bac73e4408).
+
+<p><b>Instalando o instabul ao projeto</b></p>
+
+- `npm install --save-dev nyc` - pacote para gerar o coverage
+- no package.json adiciona o nyc antes do comando mocha: `"test": "nyc --reporter=html mocha --timeout 10000 --exit tests/*.test.js"`
+
+<p>Coverage:</p>
+
+![coverage](./assets/coverage.png)
+<p></p>
+
+- Formas de proteger dados sensíveis: [Artigo do Erick Wendel](https://medium.com/trainingcenter/protegendo-dados-sens%C3%ADveis-com-git-crypt-9fca13e6835b)
+
+- adiciona esta tag no script do package.json e assim barra subir o projeto pro heroku se algum teste quebrar e disponibiliza o coverage `"preinstall": "npm i -g pm2"` e `"postinstall": "cross-env NODE_ENV=prod npm run test "`.

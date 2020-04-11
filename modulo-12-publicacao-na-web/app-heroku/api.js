@@ -28,6 +28,9 @@ const Inert = require('inert')
 const Vision = require('vision')
 const Jwt = require('jsonwebtoken')
 const HapiJwt = require('hapi-auth-jwt2')
+
+const UtilRoutes = require('./src/routes/utilRoutes')
+
 const MINHA_CHAVE_SECRETA = process.env.JWT_KEY
 
 const swaggerConfig = {
@@ -84,6 +87,7 @@ async function main() {
     app.route([
         ...mapRoutes(new HeroRoutes(mongoDb), HeroRoutes.methods()),
         // ...mapRoutes(new AuthRoutes(MINHA_CHAVE_SECRETA, postgresModel), AuthRoutes.methods())
+        ...mapRoutes(new UtilRoutes, UtilRoutes.methods())
     ])
 
     await app.start()

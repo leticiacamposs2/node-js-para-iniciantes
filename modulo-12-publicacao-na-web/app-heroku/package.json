@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 10000 tests/*.test.js",
+    "test": "nyc --reporter=html mocha --timeout 10000 --exit tests/*.test.js",
     "test:prod": "cross-env NODE_ENV=prod npm t",
     "prod": "cross-env NODE_ENV=prod node api.js",
     "start": "node api.js"
