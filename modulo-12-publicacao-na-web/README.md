@@ -63,10 +63,12 @@ Objetivo: linkar o projeto ofline com o projeto online, desta forma qualquer pro
 - `pm2 start --name herois -i 10 api.js`- crio 10 cluster
 
 - `pm2 monit` - mostra todas as aplicações que estão rodando na minha maquina de forma detalhada
+<p></p>
 ![monitor](./assets/monitor.png)
 <p></p>
 
 - `pm2 kill` - mata todas as aplicações que estão de pé
+<p></p>
 ![mata-processos](./assets/mata-processos.png)
 <p></p>
 
