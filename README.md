@@ -18,8 +18,8 @@ Repositório com o conteúdo das aulas.
 - [x] [Módulo 09 - Node.js e Web Services - Criando serviços profissionais com Hapi.js](./modulo-09-web-services)
 - [x] [Módulo 10 - Documentação de Serviços com Swagger](./modulo-10-documentacao-swagger)
 - [x] [Módulo 11 - Autenticação com Json Web Token](./modulo-11-json-web-token)
-- [ ] [Módulo 12 - Publicação de serviços na Web](./modulo-12-publicacao-na-web)
-- [ ] Módulo 13 - Próximos passos
+- [x] [Módulo 12 - Publicação de serviços na Web](./modulo-12-publicacao-na-web)
+- [x] Módulo 13 - Próximos passos
 
 ---
 

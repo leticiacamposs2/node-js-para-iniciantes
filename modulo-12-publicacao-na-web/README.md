@@ -7,7 +7,7 @@
 - [x] MongoDB online e gratuito com Mongo Lab
 - [x] [Publicação de nossos serviços e bancos de dados gratuitos com Heroku](./app-heroku)
 - [x] [Trabalhando com PM2 para gerência de apps](#pm2)
-- [ ] [Expondo cobertura de código com Instanbul](#instanbul)
+- [x] [Expondo cobertura de código com Instanbul](#instanbul)
 
 ***
 

@@ -6,8 +6,8 @@
 - [x] Trabalhando com multi-environments (development, production)
 - [x] MongoDB online e gratuito com Mongo Lab
 - [x] Publicação de nossos serviços e bancos de dados gratuitos com Heroku
-- [ ] Trabalhando com PM2 para gerência de apps
-- [ ] Expondo cobertura de código com Instanbul
+- [x] Trabalhando com PM2 para gerência de apps
+- [x] Expondo cobertura de código com Instanbul
 
 ***
 
